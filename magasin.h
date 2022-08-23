@@ -17,9 +17,9 @@ public:
 
     //Setters
     void set_id(int a){id_m=a;}
-    void set_nbV(int a){surface=a;}
+    void set_sur(int a){surface=a;}
     void set_nom(QString b){nom=b;}
-    void set_spon(QString f){adresse=f;}
+    void set_adr(QString f){adresse=f;}
 
 
    //other functions
@@ -27,13 +27,13 @@ public:
     bool ajouter();
     bool supprimer(int);
     bool modifier(int);
-    QSqlQueryModel *tri_nbV();
+    QSqlQueryModel *tri_sur();
     QSqlQueryModel *tri_id();
     QSqlQueryModel *tri_nom();
     QSqlQueryModel *displayClause(QString cls);
-    void notification_ajoutProduit();
-    void notification_suppProduit();
-    void notification_modifProduit();
+    void notification_ajoutmagasin();
+    void notification_suppmagasin();
+    void notification_modifmagasin();
     void notification_pdf();
 
 

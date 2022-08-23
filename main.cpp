@@ -2,13 +2,22 @@
 #include <QMessageBox>
 #include "connection.h"
 #include <QApplication>
+#include <QFile>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
+
     connection c;
         bool test=c.createconnect();
+        QFile file("E:/qtprojects/untitled1/style.qss");
+                   file.open(QFile::ReadOnly);
+
+                   QString styleSheet { QLatin1String(file.readAll()) };
+
+                   //setup stylesheet
+                   a.setStyleSheet(styleSheet);
+       MainWindow w;
         if(test)
         {w.show();
             QMessageBox::critical(nullptr, QObject::tr("database is open"),
