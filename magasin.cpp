@@ -148,3 +148,6 @@ void magasin::notification_pdf()
     notifyIcon->show();
     notifyIcon->showMessage("Gestion des magasins ","pdf generee ",QSystemTrayIcon::Information,15000);
 }
+
+
+

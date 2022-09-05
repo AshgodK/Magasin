@@ -35,6 +35,9 @@ public:
     void notification_suppmagasin();
     void notification_modifmagasin();
     void notification_pdf();
+    QVector<double> statistiques();
+    void makePlot();
+
 
 
 private:

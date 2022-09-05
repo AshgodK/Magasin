@@ -1,4 +1,4 @@
-QT       += core gui sql
+QT       += core gui sql printsupport serialport charts multimedia multimediawidgets widgets
 
 
 
@@ -18,12 +18,16 @@ SOURCES += \
     connection.cpp \
     magasin.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    parking.cpp \
+    qcustomplot.cpp
 
 HEADERS += \
     connection.h \
     magasin.h \
-    mainwindow.h
+    mainwindow.h \
+    parking.h \
+    qcustomplot.h
 
 FORMS += \
     mainwindow.ui
