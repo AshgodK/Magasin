@@ -710,3 +710,37 @@ void MainWindow::on_pushButton_s_m_clicked()
 
 
 
+
+void MainWindow::on_tableView_m_doubleClicked(const QModelIndex &index)
+{
+   int id=ui->tableView_m->model()->data(ui->tableView_m->model()->index(ui->tableView_m->currentIndex().row(),0)).toInt();
+   QString res = QString::number(id);
+   ui->lineEdit_id_e->setText(res);
+    QString nom;
+    nom=ui->tableView_m->model()->data(ui->tableView_m->model()->index(ui->tableView_m->currentIndex().row(),1)).toString();
+   ui->lineEdit_nom_e->setText(nom);
+   QString adr;
+  adr=ui->tableView_m->model()->data(ui->tableView_m->model()->index(ui->tableView_m->currentIndex().row(),2)).toString();
+  ui->lineEdit_nbv_e->setText(adr);
+  int urf=ui->tableView_m->model()->data(ui->tableView_m->model()->index(ui->tableView_m->currentIndex().row(),3)).toInt();
+  QString urfa = QString::number(urf);
+  ui->lineEdit_spon_e->setText(urfa);
+}
+
+
+void MainWindow::on_tableView_p_doubleClicked(const QModelIndex &index)
+{
+    int id=ui->tableView_p->model()->data(ui->tableView_p->model()->index(ui->tableView_p->currentIndex().row(),0)).toInt();
+    QString res = QString::number(id);
+    ui->lineEdit_p_id->setText(res);
+     QString nom;
+     nom=ui->tableView_p->model()->data(ui->tableView_p->model()->index(ui->tableView_p->currentIndex().row(),1)).toString();
+    ui->lineEdit_p_nom->setText(nom);
+    int cap=ui->tableView_p->model()->data(ui->tableView_p->model()->index(ui->tableView_p->currentIndex().row(),0)).toInt();
+    QString res2 = QString::number(cap);
+    ui->lineEdit_p_nbrp->setText(res);
+   int idm=ui->tableView_p->model()->data(ui->tableView_p->model()->index(ui->tableView_p->currentIndex().row(),3)).toInt();
+   QString idma = QString::number(idm);
+   ui->lineEdit_p_idM->setText(idma);
+}
+
